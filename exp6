@@ -1,0 +1,79 @@
+Template Literals
+
+let lname = "shikhar";
+let fname = `shikhar ${lname}`;
+console.log(fname);
+
+String Concatenation
+
+const name = "shikhar";
+const greeting = "Hello, " + name + "!";
+console.log(greeting);
+
+String.concat() Method
+
+const name = "shikhar";
+const greeting = "Hello, ".concat(name, "!");
+console.log(greeting);
+
+Array Join Method
+const name = "shikhar";
+const greeting = ["Hello, ", name, "!"].join("");
+console.log(greeting);
+
+                                                                                   Using a Function
+function interpolate(template, vars) {
+  return template.replace(/\${(.*?)}/g, (match, p1) => vars[p1.trim()]);
+}
+
+const name = "shikhar";
+const template = "Hello, ${ name }!";
+const greeting = interpolate(template, { name });
+console.log(greeting);
+
+                                                                  JavaScript Constructor Function
+
+class Person {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+
+  calcAge() {
+    console.log(`I am ${this.name} and ${this.age} years old.`);
+  }
+}
+
+let alex = new Person('shikhar', 20);
+console.log(alex);
+alex.calcAge();
+
+
+
+                     JavaScript Constructor Function Parameters
+
+// constructor function with parameters
+function Person(person_name, person_age, person_gender) {
+  // assign parameter values to the calling object
+  this.name = person_name;
+  this.age = person_age;
+  this.gender = person_gender;
+
+  this.greet = function () {
+    return `Hi ${this.name}`;
+  };
+}
+
+// create objects and pass arguments
+const person1 = new Person("shikhar", 20, "male");
+const person2 = new Person("Sam", 25, "female");
+
+// access properties
+console.log(person1.name);
+console.log(person2.name);
+
+
+
+
+
+
